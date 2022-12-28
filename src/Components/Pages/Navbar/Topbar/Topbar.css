@@ -1,0 +1,38 @@
+.searchbar {
+    width: 80%;
+    height: 30px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.searchIcon {
+    font-size: 20px !important;
+    margin-left: 10px;
+    color: rgb(116, 115, 115);
+}
+
+.searchInput {
+    border: none;
+    width: 70%;
+    font-size: 14px;
+}
+
+.searchInput:focus {
+    outline: none;
+}
+.iconbedge{
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
