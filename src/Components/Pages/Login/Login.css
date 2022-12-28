@@ -1,0 +1,13 @@
+.btn-item button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin: auto;
+    color: #ffffff;
+
+}
+.btn-item button p{
+    margin-left: 5px;
+}
