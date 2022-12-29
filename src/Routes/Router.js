@@ -1,3 +1,4 @@
+import ErrorElement from "../Components/Pages/ErrorElement/ErrorElement";
 import Login from "../Components/Pages/Login/Login";
 import Media from "../Components/Pages/Media/Media";
 import MediaDetails from "../Components/Pages/MediaDetails";
@@ -13,6 +14,7 @@ export const router = createBrowserRouter([
     {
         path:'/',
         element:<Main></Main>,
+        errorElement:<ErrorElement></ErrorElement>,
         children:[
             {
                 path:'/',
