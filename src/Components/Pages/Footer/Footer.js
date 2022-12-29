@@ -1,11 +1,11 @@
  import React from 'react';
  import { Link } from 'react-router-dom';
- import footer from '../../assests/facebok logo.png'
+ import footer from '../../assests/Meta-Symbol.png'
  
  
  const Footer = () => {
      return (
-         <footer className="footer p-10 bg-blue-500  text-white">
+         <footer data-theme="night" className="footer p-10  text-white">
              <div>
                 <img src={footer} className="w-20" alt="" />
                  <p>Social Network Ltd.<br />Providing reliable tech since 1992</p>

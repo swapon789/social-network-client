@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../../assests/facebok logo.png'
+import logo from '../../../assests/Meta-Symbol.png'
 import { FaBell, FaFacebookMessenger, FaHome, FaSearch } from "react-icons/fa";
-import { HiChatAlt, HiUsers } from "react-icons/hi";
+import { HiChatAlt, HiUsers, HiVideoCamera } from "react-icons/hi";
 import login from '../../../assests/login pic.png'
 import './Topbar.css'
 import { AuthContext } from '../../../../Context/AuthProvider/AuthProvider';
@@ -23,7 +23,7 @@ const Topbar = () => {
 
 
     return (
-        <nav className='bg-blue-500 sticky top-0 text-white'>
+        <nav data-theme="night" className=' sticky top-0 text-white'>
             <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full  lg:max-w-screen-xl md:px-24 lg:px-8 '>
                 <div className='relative flex items-center justify-between'>
                     <Link
@@ -32,9 +32,9 @@ const Topbar = () => {
                         title='Smart Home'
                         className='inline-flex items-center'
                     >
-                        <img src={logo} alt="" className='h-7  w-7' />
-                        <span className='ml-2 text-xl font-bold tracking-wide '>
-                            FaceBook
+                        <img src={logo} alt="" className='h-10  w-10' />
+                        <span className='ml-1 text-xl font-bold tracking-wide '>
+                            META
                         </span>
                         <div className="searchbar ml-2">
                             <FaSearch className='searchIcon'></FaSearch>
@@ -50,7 +50,7 @@ const Topbar = () => {
                                 to='/'
                                 aria-label='Home'
                                 title='Home'
-                                className='font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-green-500'
+                                className='font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-blue-500'
                             >
                                 <FaHome className='h-7 w-7'></FaHome>
 
@@ -58,12 +58,12 @@ const Topbar = () => {
                         </li>
                         <li>
                             <Link
-                                to='/'
-                                aria-label='Users'
-                                title='Users'
-                                className='font-medium tracking-wide relative transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-green-500'
+                                to='/media'
+                                aria-label='Media'
+                                title='Media'
+                                className='font-medium tracking-wide relative transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-blue-500'
                             >
-                                <HiUsers className='h-7 w-7'></HiUsers>
+                                <HiVideoCamera className='h-7 w-7'></HiVideoCamera>
                                 <span className='iconbedge'>2</span>
                             </Link>
                         </li>
@@ -72,7 +72,7 @@ const Topbar = () => {
                                 to='/about'
                                 aria-label='Shop'
                                 title='Chat'
-                                className='font-medium tracking-wide relative transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-green-500'
+                                className='font-medium tracking-wide relative transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-blue-500'
                             >
                                 <FaFacebookMessenger className='h-7 w-7'></FaFacebookMessenger>
                                 <span className='iconbedge'>4</span>
@@ -84,7 +84,7 @@ const Topbar = () => {
                                 to='/review'
                                 aria-label='Shop'
                                 title='Timeline'
-                                className='font-medium tracking-wide relative  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-green-500'
+                                className='font-medium tracking-wide relative  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-blue-500'
                             >
                                 <FaBell className='w-7 h-7'></FaBell>
                                 <span className='iconbedge'>7</span>
@@ -155,23 +155,10 @@ const Topbar = () => {
                             </svg>
                         </button>
                         {isMenuOpen && (
-                            <div className='absolute top-0 left-0 w-full z-10'>
-                                <div className='p-5 bg-blue-500 border rounded shadow-sm'>
+                            <div data-theme="night" className='absolute top-0 left-0 w-full z-10'>
+                                <div className='p-5 border rounded shadow-sm'>
                                     <div className='flex items-center justify-between mb-4'>
-                                        <div>
-                                            <Link
-                                                to='/'
-                                                aria-label='Company'
-                                                title='Company'
-                                                className='inline-flex items-center'
-                                            >
-
-                                                <span className='ml-2 text-xl font-bold tracking-wide  uppercase hover:text-violet-800'>
-                                                    Home
-                                                </span>
-                                            </Link>
-                                        </div>
-
+                                       
                                         <div>
                                             <button
                                                 aria-label='Close Menu'
@@ -195,19 +182,19 @@ const Topbar = () => {
                                                     to='/'
                                                     aria-label='Home'
                                                     title='Home'
-                                                    className='font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-green-500'
+                                                    className='font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-blue-500'
                                                 >
-                                                    <FaHome className='h-7 w-7'></FaHome>
+                                                    <FaHome className='h-7 text-white w-7'></FaHome>
                                                 </Link>
                                             </li>
                                             <li>
                                                 <Link
-                                                    to='/'
+                                                    to='/media'
                                                     aria-label='Users'
                                                     title='Users'
-                                                    className='font-medium tracking-wide relative  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-green-500'
+                                                    className='font-medium tracking-wide relative  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-blue-500'
                                                 >
-                                                    <HiUsers className='h-7 w-7'></HiUsers>
+                                                    <HiUsers className='h-7 text-white w-7'></HiUsers>
                                                     <span className='iconbedge'>2</span>
                                                 </Link>
                                             </li>
@@ -216,9 +203,9 @@ const Topbar = () => {
                                                     to='/about'
                                                     aria-label='Shop'
                                                     title='Chat'
-                                                    className='font-medium tracking-wide relative transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-green-500'
+                                                    className='font-medium tracking-wide relative transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-blue-500'
                                                 >
-                                                    <HiChatAlt className='h-7 w-7 '></HiChatAlt>
+                                                    <HiChatAlt className='h-7 text-white w-7 '></HiChatAlt>
                                                     <span className='iconbedge'>4</span>
 
                                                 </Link>
@@ -228,9 +215,9 @@ const Topbar = () => {
                                                     to='/review'
                                                     aria-label='Shop'
                                                     title='Timeline'
-                                                    className='font-medium tracking-wide relative  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-green-500'
+                                                    className='font-medium tracking-wide relative  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-blue-500'
                                                 >
-                                                    <FaBell className='w-7 h-7'></FaBell>
+                                                    <FaBell className='w-7 text-white h-7'></FaBell>
                                                     <span className='iconbedge'>7</span>
                                                 </Link>
                                             </li>
@@ -239,7 +226,7 @@ const Topbar = () => {
                                                     to='/'
                                                     aria-label='Login'
                                                     title='Login'
-                                                    className='font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-green-500'
+                                                    className='font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-blue-500'
                                                 >
                                                     <img src={login} alt="" className='h-8 w-8' />
                                                 </Link>
@@ -266,7 +253,7 @@ const Topbar = () => {
                                                                 title='logOut'
                                                                 className='font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
                                                             >
-                                                                logOut
+                                                                <img src={logout} alt="" className='h-8 text-green-400 w-8' />
                                                             </Link>
                                                         </li>
                                                         <li>

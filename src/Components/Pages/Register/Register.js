@@ -61,19 +61,20 @@ const Register = () => {
                             <form onSubmit={handleSubmit} className="mt-6">
                                 <div className="space-y-1 text-sm">
                                     <label htmlFor="name" className="block dark:text-gray-400">Username</label>
-                                    <input type="text" name="name" id="name" placeholder="Enter Your Name" className="w-full bg-black px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" />
+                                    <input type="text" name="name" id="name" placeholder="Enter Your Name" className="w-full text-white bg-black px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" />
                                 </div>
                                 <div className="space-y-1 text-sm">
-                                    <label htmlFor="photoURL" className="block dark:text-gray-400">PhotoURL</label>
-                                    <input type="text" name="photoURL" id="photoURl" placeholder="Enter Your PhotoURL" className="w-full bg-black px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" />
+                                    <label htmlFor="photoURL" className="block dark:text-gray-400">Photo URL</label>
+                                    <input type="text" name="photoURL" id="photoURL" placeholder="Enter Your Name" className="w-full text-white bg-black px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" />
                                 </div>
+                            
                                 <div className="space-y-1 text-sm">
                                     <label htmlFor="email" className="block dark:text-gray-400">Email</label>
-                                    <input type="email" name="email" id="email" placeholder="Enter your Email" className="w-full px-4 bg-black py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" />
+                                    <input type="email" name="email" id="email" placeholder="Enter your Email" className="w-full text-white px-4 bg-black py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" />
                                 </div>
                                 <div className="space-y-1 text-sm">
                                     <label htmlFor="password" className="block dark:text-gray-400">Password</label>
-                                    <input type="password" name="password" id="password" placeholder="Enter Your Password" className="w-full bg-black px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" />
+                                    <input type="password" name="password" id="password" placeholder="Enter Your Password" className="w-full text-white bg-black px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" />
                                 </div>
                                 <p className='text-red-600'>
                                     {error}

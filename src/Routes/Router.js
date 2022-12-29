@@ -1,4 +1,7 @@
 import Login from "../Components/Pages/Login/Login";
+import Media from "../Components/Pages/Media/Media";
+import MediaDetails from "../Components/Pages/MediaDetails";
+
 import Profile from "../Components/Pages/Profile/Profile";
 import Register from "../Components/Pages/Register/Register";
 
@@ -26,6 +29,15 @@ export const router = createBrowserRouter([
             {
                 path:'/profile',
                 element:<Profile></Profile>
+            },
+            {
+                path:'/media',
+                element:<Media></Media>
+            },
+            {
+                path:'/postdetails/:id',
+                element: <MediaDetails></MediaDetails>,
+                loader: ({ params }) => fetch(`http://localhost:5000/postdetails/${params.id}`)
             },
         ]
     }
