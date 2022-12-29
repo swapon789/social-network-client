@@ -20,7 +20,7 @@ const Profile = () => {
             <div className='text-center pt-20 pb-5'>
                 <button className="btn text-black bg-white t w-96 ">Profile</button>
             </div>
-            <div data-theme="synthwave" className="max-w-5xl  py-20 flex justify-evenly text-white px-20 mx-auto sm:flex sm:space-x-6 dark:bg-gray-900 dark:text-gray-100">
+            <div data-theme="synthwave" className="max-w-5xl sm:flex-none  py-20 flex justify-evenly text-white px-20 mx-auto  dark:bg-gray-900 dark:text-gray-100">
                 <div className="flex-shrink-0 w-full mb-6 h-44 sm:h-32 sm:w-32 sm:mb-0">
                     <img src={user?.photoURL} alt="" className="object-cover object-center rounded-full w-full h-full  dark:bg-gray-500" />
                 </div>
