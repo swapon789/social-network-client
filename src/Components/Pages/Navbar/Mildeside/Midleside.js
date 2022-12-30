@@ -9,10 +9,10 @@ const Midleside = () => {
 	const [posts, setposts] = useState([]);
 
 	useEffect(() => {
-        fetch('https://facebook-sites-server.vercel.app/postfield')
-            .then(res => res.json())
-            .then(data => setposts(data))
-    }, []);
+		fetch('https://facebook-sites-server.vercel.app/postfield')
+			.then(res => res.json())
+			.then(data => setposts(data))
+	}, []);
 
 
 	const { register, formState: { errors }, handleSubmit } = useForm();
@@ -55,10 +55,12 @@ const Midleside = () => {
 	const { user } = useContext(AuthContext);
 	return (
 		<div className='text-black'>
-			<div className="rounded-md bg-white my-7 shadow-md  dark:bg-gray-900 dark:text-gray-100">
+			<div className="rounded-md bg-white my-7 shadow-md sm:w-full dark:bg-gray-900 dark:text-gray-100">
+				<div className="flex items-center justify-between p-2 pt-3">
 					<div className="flex items-center space-x-2">
 						<img src={user?.photoURL} alt="" className="object-cover object-center w-12 h-12 rounded-full shadow-sm dark:bg-gray-500 dark:border-gray-700" />
 					</div>
+				</div>
 				<form onSubmit={handleSubmit(handleAddPost)}>
 					<textarea type="text" {...register("description", { required: "description is required" })} className="textarea flex items-center mx-auto bg-gray-300 placeholder:text-black w-96" placeholder="Whats On your Mind"></textarea>
 					{errors.description && <p className='text-orange-400'>{errors.description?.message}</p>}
@@ -73,7 +75,7 @@ const Midleside = () => {
 						<input type="file" {...register("image", { required: "image is required" })} id="dropzone-file" class="hidden" />
 						{errors.image && <p className='text-orange-400'>{errors.image?.message}</p>}
 					</label>
-					<button className='w-52 mx-32 btn bg-gray-500 mb-2'>Post</button>
+					<button className='w-52 mx-32 btn bg-gray-500  mb-2'>Post</button>
 				</form>
 				<div className='flex items-center justify-evenly'>
 					<div className='flex gap-1 pb-3'>
@@ -101,11 +103,11 @@ const Midleside = () => {
 					</div>
 				</div>
 			</div>
-              <div className='grid grid-cols-1 sm:grid-cols-1  p-8'>
+			<div className='grid grid-cols-1 md:grid-cols-2  p-10'>
 				{
 					posts.map(post => <PostCard key={post._id} post={post}></PostCard>)
 				}
-			  </div>
+			</div>
 		</div>
 	);
 };
