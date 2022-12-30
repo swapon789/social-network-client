@@ -26,28 +26,30 @@ const Profile = () => {
                 </div>
                 <div className="flex text-white flex-col ">
                     <div>
-                        <h2 className='text-xl  font-bold underline'>About</h2>
+                        <h2 className='text-xl text-center md:text-left   font-bold underline'>About</h2>
                     </div>
                     {
-                       abouts.map(about =>
-                                <div>
-                                    <p className="mt-5 md:text-md text-center md:text-left">Name: <small>{user?.displayName ? user?.displayName : 'name is null'}</small> </p>
-                                    <p className=" text-center md:text-left">Email: <small>{user?.email ? user?.email : "email is null"}</small> </p>
-                                    <p className="  text-center md:text-left ">University: <small>{about?.university}</small> </p>
-                                    <p className="  text-center md:text-left">Address: <small>{about?.address}</small> </p>
-                                    <label htmlFor="my-modal-3" className="mt-2 btn btn-sm  btn-info text-white shadow-slate-100">Edit</label>
+                        abouts.map(about =>
+                            <div>
+                                <p className="mt-5 md:text-md text-center md:text-left">Name: <small>{user?.displayName ? user?.displayName : 'name is null'}</small> </p>
+                                <p className=" text-center md:text-left">Email: <small>{user?.email ? user?.email : "email is null"}</small> </p>
+                                <p className="  text-center md:text-left ">University: <small>{about?.university}</small> </p>
+                                <p className="  text-center md:text-left">Address: <small>{about?.address}</small> </p>
+                                <div className='text-center md:text-left'>
+                                    <label htmlFor="my-modal-3" className="mt-2 btn btn-sm   btn-info text-white shadow-slate-100">Edit</label>
                                 </div>
-                            )
-                        }
-                         {
-                            abouts.map(aboutus =>
-                               <Userupdate 
-                               abouteUser={aboutus}>
+                            </div>
+                        )
+                    }
+                    {
+                        abouts.map(aboutus =>
+                            <Userupdate
+                                abouteUser={aboutus}>
 
-                               </Userupdate>
+                            </Userupdate>
 
-                            )
-                        }
+                        )
+                    }
                 </div>
             </div>
         </div>

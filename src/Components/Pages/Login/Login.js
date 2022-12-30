@@ -19,6 +19,9 @@ const Login = () => {
                 const user = result.user;
                 console.log(user)
                 toast.success('success')
+                if (user) {
+                    navigate(from, { replace: true });
+                }
             })
             .catch(error => console.error(error))
     }
