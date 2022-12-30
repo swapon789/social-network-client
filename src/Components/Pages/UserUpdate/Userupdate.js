@@ -9,7 +9,7 @@ const Userupdate = ({abouteUser}) => {
    
 
     const handleUpdate = () => {
-        fetch(`http://localhost:5000/updateAbout/${abouteUser?._id}`, {
+        fetch(`https://facebook-sites-server.vercel.app/updateAbout/${abouteUser?._id}`, {
             method: 'PATCH',
             headers: {
                 "content-type": "application/json",

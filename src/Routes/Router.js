@@ -39,7 +39,7 @@ export const router = createBrowserRouter([
             {
                 path:'/postdetails/:id',
                 element: <MediaDetails></MediaDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/postdetails/${params.id}`)
+                loader: ({ params }) => fetch(`https://facebook-sites-server.vercel.app/postdetails/${params.id}`)
             },
         ]
     }

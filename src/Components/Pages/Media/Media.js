@@ -7,7 +7,7 @@ const Media = () => {
     const [posts, setposts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/postfield')
+        fetch('https://facebook-sites-server.vercel.app/postfield')
             .then(res => res.json())
             .then(data => setposts(data))
     }, [])

@@ -191,10 +191,10 @@ const Topbar = () => {
                                                 <Link
                                                     to='/media'
                                                     aria-label='Users'
-                                                    title='Users'
+                                                    title='Media'
                                                     className='font-medium tracking-wide relative  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-blue-500'
                                                 >
-                                                    <HiUsers className='h-7 text-white w-7'></HiUsers>
+                                                    <HiVideoCamera className='h-7 text-white w-7'></HiVideoCamera>
                                                     <span className='iconbedge'>2</span>
                                                 </Link>
                                             </li>
@@ -221,16 +221,6 @@ const Topbar = () => {
                                                     <span className='iconbedge'>7</span>
                                                 </Link>
                                             </li>
-                                            <li>
-                                                <Link
-                                                    to='/'
-                                                    aria-label='Login'
-                                                    title='Login'
-                                                    className='font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-blue-500'
-                                                >
-                                                    <img src={login} alt="" className='h-8 w-8' />
-                                                </Link>
-                                            </li>
                                             {
                                                 !user?.uid ?
                                                     <li>
@@ -240,7 +230,7 @@ const Topbar = () => {
                                                             title='About Us'
                                                             className='font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
                                                         >
-                                                            Login
+                                                            <img src={login} alt="" className='h-8 w-8' />
                                                         </Link>
                                                     </li>
                                                     :
